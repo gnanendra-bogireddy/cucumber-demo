@@ -30,6 +30,7 @@ public class StepDefinitions {
     @Given("I have {int} cukes in my belly")
     public void i_have_n_cukes_in_my_belly(int cukes) {
         System.out.format("Cukes: %n\n", cukes);
+        throw new RuntimeException("Exception occurred");
     }
 
     @ParameterType("red|blue|yellow")  // regexp
@@ -45,12 +46,12 @@ public class StepDefinitions {
 
     @Given("I have {int} code editor(s) installed/uninstall in my machine/vdi")
     public void i_have_code_editors_installed_in_my_machine(Integer int1) {
-
+        throw new RuntimeException("Exception occurred");
     }
     @When("^I use only (\\d+) code editor$")
     public void i_use_only_code_editor(Integer int1) {
         System.out.println("Integer num : " +int1);
-
+        throw new RuntimeException("Exception occurred");
     }
     @Then("I {word} another {string} from my {}")
     public void i_uninstall_another_code_editor_from_my_machine(String word, String string, String anonymous) {
